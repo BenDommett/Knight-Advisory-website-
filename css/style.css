@@ -1,0 +1,28 @@
+#banner{
+  border: solid;
+  padding: 10px; 
+}
+a:link { text-decoration: underline; }
+
+.NavCss {
+  
+  /**border: solid;**/
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  
+
+
+}
+.NavCss a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.NavCss a:hover{
+  text-decoration: underline;
+  background-color: lightblue;
+
+}
