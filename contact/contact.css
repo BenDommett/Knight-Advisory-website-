@@ -1,0 +1,53 @@
+.Contact { 
+  justify-items: center;
+  display: grid;
+  
+  column-gap: 20px;
+  width: 60%;
+  padding: 2rem;
+  
+  border-radius: 8px;
+  background: #5D8AA8;
+  margin: 3rem auto;
+}
+.Label{
+  padding-right: 20px ;
+}
+
+.input{
+  box-sizing: border-box;
+  
+}
+
+.messageinput{
+  resize: none;
+  width: 300px;
+  height: 150px;
+}
+
+.emaillabel{
+  text-align: left;
+}
+.emailinput{
+ 
+ 
+
+}
+
+.LabelSecondName{
+  border: solid black;
+  margin-right: 50%;
+}
+
+.rowOne {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2rem; /* row-gap column-gap */
+}
+.sendButton{
+  margin-left: 40%;
+  width: 24%;
+}
+.Label {
+  justify-self: start; /* keeps labels aligned left */
+}

@@ -6,14 +6,21 @@
 
   <!-- CSS belongs in HEAD -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="contact.css">
+  <!-- link to the cobntact.js -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src=".\contact.js"></script>
 </head>
 
 <body>
 
   <!-- CONTENT belongs in BODY -->
   <header>
-    <div id="banner">
-      <img src="/images/logo.png" alt="Knight Advisory logo" width="100" height="100">
+     <div id="banner">
+      <img class = "bannerimage" src = "/images/bannerImage.png"  alt = "website bannerImage chess peaces" >
+        <div>
+             <img class = "logo" src="/images/logo.png" alt="Knight Advisory logo" >
+        </div>
     </div>
 
     <nav class = "NavCss">
@@ -23,7 +30,56 @@
       <a href="/">Contact</a>
     </nav>
   </header>
+ <form id="contact-form">
+  <div class="Contact">
 
+    <div class="rowOne">
+      <label class="Label">First Name</label>
+      <label class="Label">Second Name</label>
+
+      <input
+        type="text"
+        class="input"
+        name="firstname"
+        placeholder="first name"
+        required
+      >
+
+      <input
+        type="text"
+        class="input"
+        name="secondname"
+        placeholder="second name"
+        required
+      >
+    </div>
+
+    <div class="row">
+      <div ><label class="emaillabel">Email address</label></div>
+      <input
+        type="email"
+        class="emailinput"
+        name="email"
+        placeholder="email"
+        required
+      >
+    </div>
+
+    <div class="row">
+      <div> <label class="Label">Message</label></div>
+     
+      <textarea
+        class="messageinput"
+        name="message"
+        placeholder="message"
+        required
+      ></textarea>
+    </div>
+
+    <button class = "sendButton" type="submit">Send</button>
+
+  </div>
+</form>
   <footer>
     <!-- footer content -->
   </footer>
