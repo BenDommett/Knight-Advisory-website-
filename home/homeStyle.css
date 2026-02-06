@@ -1,0 +1,85 @@
+
+/* Small devices – tablets, 600px and up */
+@media (min-width: 600px) {
+    #homeDiv1 {
+        
+        flex-direction: row; /* maybe layout changes on bigger screens */
+    }
+}
+
+/* Medium devices – 768px and up */
+@media (min-width: 768px) {
+    #homeDiv1 {
+       width: 50%; 
+       height: 30vh;
+       padding: 2rm;
+       
+       margin-top: 5%;
+     
+    }
+}
+
+/* Large devices – 992px and up */
+@media (min-width: 992px) {
+    #homeDiv1 {
+       
+    }
+}
+
+/* Extra large – 1200px and up */
+@media (min-width: 1200px) {
+    #homeDiv1 {
+      
+      
+    }
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#homeDiv1 {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    isolation: isolate; /* Keeps the z-index layers contained here */
+}
+
+/* THE TEXT */
+#homeDiv1 p {
+    z-index: 3; /* Keeps text ABOVE both boxes */
+    position: relative;
+    padding: 20px;
+    margin: 0;
+}
+
+/* THE BLUE BOX (Foreground) */
+#homeDiv1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%; /* Adjusted so it's big enough to see */
+    height: 80%;
+    background: #5D8AA8;
+    border-radius: 1rem;
+    z-index: 2; 
+}
+
+/* THE RED BOX (Background) */
+#homeDiv1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    width: 25%; /* Smaller than blue, peeking out the bottom-right */
+    height: 50%;
+    background-color: red;
+    border-radius: 1rem;
+    z-index: 1; /* Sits behind the blue box */
+}
